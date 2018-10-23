@@ -4,7 +4,7 @@
 
 [Download DOSBox](https://www.dosbox.com)
 
-[Download MASM](https://link.jianshu.com/?t=http://cdn.suiyuanjian.com/DOSBox-0.74-1_Universal.dmg)
+[Download MASM](https://link.jianshu.com/?t=http://cdn.suiyuanjian.com/masm5.zip)
 
 ## To mount a drive on disk
 
