@@ -15,13 +15,14 @@ BEGIN:  PUSH DS
         MOV BH,2        ;int i = 2
 
 LOOPA:  CMP BH,100      
-        JA STOP         ;if i > 100 then stop
+        JA EXIT         ;if i > 100 then stop
         MOV BL,2        ;int j = 2
+
 LOOPB:  CMP BL,BH       
         JA NEXT         ;if j>i then jump to LOOPA
         JE PRINT        ;if j==i then j is a prime number
         MOV AX,0        
-        MOV AL,BH       ;AL saves quotient and AH saves remainder
+        MOV AL,BH       ;AL saves quotient and AH saves remainder(8-bit)
         DIV BL          ;i/j
         CMP AH,0        ;if i%j==0 then j is not a prime number
         JE NEXT         ;jump to LOOPA
@@ -47,7 +48,9 @@ PRINT:  MOV AH,0
 
 NEXT:   INC BH          ;i++   
         JMP LOOPA
-STOP:   RET
+
+EXIT:   RET
+
 MAIN    ENDP
 
 CODE    ENDS

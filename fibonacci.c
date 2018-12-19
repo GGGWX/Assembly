@@ -5,7 +5,7 @@ long long fibonacci(int i){
 }
 int main(int argc, char const *argv[])
 {
-    for(int i = 1; i <= 30; i ++){
+    for(int i = 1; i <= 30; i++){
         printf(" %lld ",fibonacci(i));
     }
     return 0;
