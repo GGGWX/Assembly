@@ -35,7 +35,7 @@ MAIN    ENDP
 
 QUEEN   PROC NEAR
         CMP BL,MAX       
-        JA  PRINTA      ;print answer
+        JA  PRINT       ;print answer
         MOV BH,0        ;int j = 0
 LOOPA:  INC BH
         CMP BH,MAX
@@ -71,11 +71,11 @@ NEXT:   CMP CL,BL       ;compare i and k
         CALL QUEEN
         POP BX
         JMP LOOPA
-PRINTA: CALL MYPRINT
+PRINT:  CALL PRINT
 EXIT:   RET
 QUEEN   ENDP
 
-MYPRINT PROC NEAR
+PRINT   PROC NEAR
         MOV CX,0        ;i=0
 LOOPP:  INC CX
         CMP CX,MAX
@@ -94,7 +94,7 @@ EXITP:  INC COUNT
         MOV AH,2
         INT 21H
         RET
-MYPRINT ENDP
+PRINT   ENDP
 
 CODE    ENDS
         END MAIN
